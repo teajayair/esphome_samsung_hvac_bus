@@ -989,6 +989,10 @@ namespace esphome
                 LOG_MESSAGE(actual_produced_energy, value, source, dest);
                 break;
             }
+            case MessageNumber::FSV_3041:
+            {
+                LOG_MESSAGE(ENUM_in_FSV_3041, (double)message.value, source, dest);
+            }
             default:
             {
                 if (debug_log_undefined_messages && should_log_undefined_msg(source, dest, message))
