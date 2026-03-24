@@ -993,6 +993,10 @@ namespace esphome
             {
                 LOG_MESSAGE(ENUM_in_FSV_3041, (double)message.value, source, dest);
             }
+            case MessageNumber::FSV_3042:
+            {
+                LOG_MESSAGE(ENUM_in_FSV_3042, (double)message.value, source, dest);
+            }
             default:
             {
                 if (debug_log_undefined_messages && should_log_undefined_msg(source, dest, message))
