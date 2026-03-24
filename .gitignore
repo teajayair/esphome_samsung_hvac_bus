@@ -32,3 +32,6 @@ CMakeLists.txt
 esp.yaml
 secrets.yaml
 dev-esp.yaml
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs
