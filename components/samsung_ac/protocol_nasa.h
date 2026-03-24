@@ -168,6 +168,10 @@ namespace esphome
             VAR_IN_DUST_SENSOR_PM2_5_VALUE = 0x42d2,
             VAR_IN_DUST_SENSOR_PM1_0_VALUE = 0x42d3,
 
+            // --- TJA Additional
+            ENUM_in_FSV_3041 = 0x4099
+            ENUM_in_FSV_3042 = 0x409a
+
         };
 
         struct Address
