@@ -99,6 +99,8 @@ namespace esphome
             VAR_in_temp_water_tank_f = 0x4237,
             VAR_in_temp_water_outlet_target_f = 0x4247,
 
+            VAR_in_flow_sensor_calc = 0x42E9,
+
             VAR_out_sensor_airout = 0x8204,
             VAR_OUT_SENSOR_CT1 = 0x8217,
 
