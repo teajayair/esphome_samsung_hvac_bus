@@ -267,6 +267,12 @@ namespace esphome
                                  { dev->update_enum_text(0x8003, value); });
       }
 
+      void set_flow_sensor(const std::string address, float value) override
+      {
+          execute_if_device_exists(address, [value](Samsung_AC_Device* dev)
+              { dev->update_sensor_state(dev->flow_sensor, value); });
+      }
+
     protected:
       Samsung_AC_Device *find_device(const std::string &address)
       {

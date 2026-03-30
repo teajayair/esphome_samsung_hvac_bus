@@ -193,6 +193,11 @@ namespace esphome
         outdoor_temperature = sensor;
       }
 
+      void set_flow_sensor(sensor::Sensor* sensor)
+      {
+          flow_sensor = sensor;
+      }
+
       void set_indoor_eva_in_temperature_sensor(sensor::Sensor *sensor)
       {
         indoor_eva_in_temperature = sensor;
