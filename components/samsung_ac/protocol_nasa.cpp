@@ -1000,7 +1000,7 @@ namespace esphome
             {
                 if (debug_log_undefined_messages && should_log_undefined_msg(source, dest, message))
                 {
-                    LOGW("Undefined TJA6 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
+                    LOGW("Undefined TJA7 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
                 }
                 break;
             }
