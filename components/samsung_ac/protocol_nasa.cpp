@@ -768,7 +768,7 @@ namespace esphome
             {
                 double temp = (double)message.value / (double)10;
                 LOG_MESSAGE(VAR_in_flow_sensor_calc, temp, source, dest);
-                target->set_flow_sensor(source, temp);
+                target->set_flow(source, temp);
                 break;
             }
             case MessageNumber::VAR_in_temp_water_outlet_target_f: // unit = 'Celsius' from XML
@@ -1000,7 +1000,7 @@ namespace esphome
             {
                 if (debug_log_undefined_messages && should_log_undefined_msg(source, dest, message))
                 {
-                    LOGW("Undefined TJA8 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
+                    LOGW("Undefined TJA9 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
                 }
                 break;
             }
