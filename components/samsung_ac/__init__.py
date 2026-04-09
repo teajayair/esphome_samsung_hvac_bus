@@ -93,6 +93,8 @@ CONF_DEVICE_OUT_SENSOR_VOLTAGE = "outdoor_voltage"
 CONF_MAP_AUTO_TO_HEAT_COOL = "map_auto_to_heat_cool"
 CONF_DEBUG_LOG_MESSAGES_ON_CHANGE = "debug_log_messages_on_change"
 CONF_NON_NASA_TX_DELAY_MS = "non_nasa_tx_delay_ms"
+CONF_DEVICE_IN_FLOW_SENSOR = "flow_sensor"
+
 
 CONF_CAPABILITIES = "capabilities"
 CONF_CAPABILITIES_FAN_MODES = "fan_modes"
@@ -321,6 +323,17 @@ DEVICE_SCHEMA = cv.Schema(
         ).extend(
             {
                 cv.Optional(CONF_DEVICE_CUSTOM_MESSAGE, default=0x24FC): cv.hex_int,
+            }
+        ),
+        cv.Optional(CONF_DEVICE_IN_FLOW_SENSOR): sensor.sensor_schema(
+            unit_of_measurement="l/m",
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_FLOW,
+            state_class=STATE_CLASS_MEASUREMENT,
+            icon="mdi:flash",
+        ).extend(
+            {
+                cv.Optional(CONF_DEVICE_CUSTOM_MESSAGE, default=0x42E9): cv.hex_int,
             }
         ),
         cv.Optional(
