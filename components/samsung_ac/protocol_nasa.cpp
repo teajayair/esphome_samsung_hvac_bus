@@ -993,14 +993,14 @@ namespace esphome
             {
                 double value = (double)message.value / (double)10;
                 LOG_MESSAGE(VAR_in_flow_sensor_calc, value, source, dest);
-                //target->set_flow(source, temp);
+                target->set_flow_sensor(source, value);
                 break;
             }
             default:
             {
                 if (debug_log_undefined_messages && should_log_undefined_msg(source, dest, message))
                 {
-                    LOGW("Undefined TJA12 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
+                    LOGW("Undefined TJA13 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
                 }
                 break;
             }
