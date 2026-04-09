@@ -514,6 +514,10 @@ async def to_code(config):
                 text_sensor.new_text_sensor,
                 var_dev.set_outdoor_operation_heatcool_text_sensor,
             ),
+            CONF_DEVICE_IN_FLOW_SENSOR: (
+                sensor.new_sensor,
+                var_dev.set_flow_sensor,
+            ),
         }
 
         # Iterate over the actions
