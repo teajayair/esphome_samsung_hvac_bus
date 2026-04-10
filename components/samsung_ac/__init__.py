@@ -94,8 +94,8 @@ CONF_MAP_AUTO_TO_HEAT_COOL = "map_auto_to_heat_cool"
 CONF_DEBUG_LOG_MESSAGES_ON_CHANGE = "debug_log_messages_on_change"
 CONF_NON_NASA_TX_DELAY_MS = "non_nasa_tx_delay_ms"
 CONF_DEVICE_IN_FLOW_SENSOR = "flow_sensor"
-CONF_DEVICE_OUT_TW1_SENSOR = "TW1_sensor"
-CONF_DEVICE_OUT_TW2_SENSOR = "TW2_sensor"
+CONF_DEVICE_OUT_TW1_SENSOR = "tw1_sensor"
+CONF_DEVICE_OUT_TW2_SENSOR = "tw2_sensor"
 
 
 CONF_CAPABILITIES = "capabilities"
@@ -555,11 +555,11 @@ async def to_code(config):
             ),
              CONF_DEVICE_OUT_TW1_SENSOR: (
                 sensor.new_sensor,
-                var_dev.set_TW1_sensor,
+                var_dev.set_tw1_sensor,
             ),
              CONF_DEVICE_OUT_TW2_SENSOR: (
                 sensor.new_sensor,
-                var_dev.set_TW2_sensor,
+                var_dev.set_tw2_sensor,
             ),
         }
 

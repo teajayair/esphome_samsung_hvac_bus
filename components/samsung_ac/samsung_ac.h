@@ -280,12 +280,12 @@ namespace esphome
 
       void set_tw1_sensor(const std::string& address, float value)
       {
-          update_device_sensor(address, &Samsung_AC_Device::TW1_sensor, value);
+          update_device_sensor(address, &Samsung_AC_Device::tw1_sensor, value);
       }
 
       void set_tw2_sensor(const std::string& address, float value)
       {
-          update_device_sensor(address, &Samsung_AC_Device::TW2_sensor, value);
+          update_device_sensor(address, &Samsung_AC_Device::tw2_sensor, value);
       }
 
     protected:
