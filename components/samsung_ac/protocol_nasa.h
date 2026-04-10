@@ -99,12 +99,16 @@ namespace esphome
             VAR_in_temp_water_tank_f = 0x4237,
             VAR_in_temp_water_outlet_target_f = 0x4247,
 
-            VAR_in_flow_sensor_calc = 0x42E9,
-
             VAR_out_sensor_airout = 0x8204,
             VAR_OUT_SENSOR_CT1 = 0x8217,
 
             VAR_out_error_code = 0x8235,
+
+            //TJA
+            VAR_in_flow_sensor_calc = 0x42E9,
+            VAR_out_tw1_sensor = 0x82df,
+            VAR_out_tw2_sensor = 0x82e0,
+
 
             // Power/Energy (existing)
             LVAR_OUT_CONTROL_WATTMETER_1W_1MIN_SUM = 0x8413,

@@ -129,7 +129,9 @@ namespace esphome
       sensor::Sensor *outdoor_voltage{nullptr};
       text_sensor::TextSensor *outdoor_operation_odu_mode_text{nullptr};
       text_sensor::TextSensor *outdoor_operation_heatcool_text{nullptr};
-      sensor::Sensor *flow_sensor{nullptr};
+      sensor::Sensor* flow_sensor{ nullptr };
+      sensor::Sensor* TW1_sensor{ nullptr };
+      sensor::Sensor* TW2_sensor{ nullptr };
 
       Samsung_AC_Number *target_temperature{nullptr};
       Samsung_AC_Number *water_outlet_target{nullptr};

@@ -996,11 +996,25 @@ namespace esphome
                 target->set_flow_sensor(source, value);
                 break;
             }
+            case MessageNumber::VAR_out_tw1_sensor:
+            {
+                double value = (double)message.value / (double)10;
+                LOG_MESSAGE(VAR_out_tw1_sensor, value, source, dest);
+                target->set_tw1_sensor(source, value);
+                break;
+            }
+            case MessageNumber::VAR_out_tw2_sensor:
+            {
+                double value = (double)message.value / (double)10;
+                LOG_MESSAGE(VAR_out_tw2_sensor, value, source, dest);
+                target->set_tw2_sensor(source, value);
+                break;
+            }
             default:
             {
                 if (debug_log_undefined_messages && should_log_undefined_msg(source, dest, message))
                 {
-                    LOGW("Undefined TJA19 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
+                    LOGW("Undefined TJA20 s:%s d:%s %s", source.c_str(), dest.c_str(), message.to_string().c_str());
                 }
                 break;
             }

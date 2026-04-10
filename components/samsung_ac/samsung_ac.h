@@ -278,6 +278,16 @@ namespace esphome
           update_device_sensor(address, &Samsung_AC_Device::flow_sensor, value);
       }
 
+      void set_tw1_sensor(const std::string& address, float value)
+      {
+          update_device_sensor(address, &Samsung_AC_Device::TW1_sensor, value);
+      }
+
+      void set_tw2_sensor(const std::string& address, float value)
+      {
+          update_device_sensor(address, &Samsung_AC_Device::TW2_sensor, value);
+      }
+
     protected:
       Samsung_AC_Device *find_device(const std::string &address)
       {
