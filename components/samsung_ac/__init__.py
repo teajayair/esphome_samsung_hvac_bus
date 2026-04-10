@@ -328,7 +328,6 @@ DEVICE_SCHEMA = cv.Schema(
         cv.Optional(CONF_DEVICE_IN_FLOW_SENSOR): sensor.sensor_schema(
             unit_of_measurement="l/m",
             accuracy_decimals=1,
-            device_class=cv
             state_class=STATE_CLASS_MEASUREMENT,
             icon="mdi:hydro-power",
         ).extend(
